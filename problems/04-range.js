@@ -11,8 +11,11 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-function range(start, end) {
-  // Your code here
+function range(start, end, arr = []) {
+  if (start > end) return []
+  if (start === end) return arr
+  arr.push(start)
+  return range(start + 1, end, arr)
 }
 
 
